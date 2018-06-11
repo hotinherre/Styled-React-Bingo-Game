@@ -1,6 +1,6 @@
 'use strict';
 
-const Game = {
+const game = {
     pendingBalls:[],
     usedBalls:new Set(),
     newGame: function(numberOfBalls){
@@ -12,7 +12,6 @@ const Game = {
         if(this.pendingBalls.length == 0){
             return -1;
         }
-
         const ball = this.pendingBalls.pop();
         this.usedBalls.add(ball);
         return ball;
@@ -32,7 +31,8 @@ const Game = {
         };
     }
 }
-module.exports = Game;
+
+module.exports = game;
 
 //generate an array with elements: [1,2,3,4,....,n]
 function _initArray(n){
