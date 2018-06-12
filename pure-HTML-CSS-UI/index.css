@@ -1,0 +1,128 @@
+.container{
+    width: 70%;
+    margin: auto;
+    background: #dee6ed;
+}
+
+.header{
+    background: #cbcdcb;
+    padding: 5px;
+    display:grid;
+    grid-template-columns:1fr 1fr 2fr;
+    grid-gap:1em;
+    padding:20px;
+}
+
+/* lastball */
+.lastBall_container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1em;
+    padding:10px;
+}
+
+.lastBall_div{
+    background: white;
+    border:3px #0099ff solid;
+    border-radius:10px;
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.lastBall_div p{
+    font-size: 30px;
+    font-weight: bold;
+    color: #0099ff;
+    margin: 0;
+}
+
+/* preball */
+.preBall_container{
+    display:grid;
+}
+
+.preBall_container h3{
+    margin: 0px;
+}
+
+.preBall_subcontainer{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+}
+
+.preBall_div{
+    background: white;
+    border-radius:5px;
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center    
+}
+
+.preBall_div p{
+    font-size: 20px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+/* ticket */
+.ticket_container{
+    padding:3%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:2em;
+}
+
+.ticket{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+}
+
+.ticket div{
+    border:1px #999999 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:white;
+}
+
+.ticket p{
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+.ticket .selected{
+    background: #1a58d2;
+    color:white;
+}
+
+.ticket .selected p{
+    color:white;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
