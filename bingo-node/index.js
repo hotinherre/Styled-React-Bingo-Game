@@ -1,4 +1,4 @@
-const bootstrap = require("./bootstrap");
+const bootstrap = require("./app/bootstrap");
 
 var args = process.argv.slice(2);
 const port = args[0] || 12321;
