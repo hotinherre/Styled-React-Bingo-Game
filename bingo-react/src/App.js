@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import swal from 'sweetalert';
+
 
 class App extends Component {
   render() {
+
+    swal("Good job!", "You clicked the button!", "success");
+    
     return (
       <div className="App">
         <header className="App-header">

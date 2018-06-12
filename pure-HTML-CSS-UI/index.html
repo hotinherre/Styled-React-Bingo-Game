@@ -4,6 +4,28 @@
 <head>
     <title>bingo rough UI</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="sweetalert.js"></script>
+    <script>
+        function bingo(){
+            swal({
+              title: 'You Win!!',
+              imageUrl: 'youWin.gif',
+              imageAlt: 'Custom image',
+              
+            });
+        }
+
+        function notBingo(){
+            swal({
+              title: 'Not A Bingo Ticket!!',
+              imageUrl: 'youLie.gif',
+              imageAlt: 'Custom image',
+              animation: false
+            });
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -11,7 +33,7 @@
         <div class="header">
             <div class="lastBall_container">
                 <div>
-                    <h2>Last Ball:</h2>
+                    <h1>Last Ball:</h1>
                 </div>
                 <div class="lastBall_div">
                     <p>77</p>
@@ -19,7 +41,7 @@
             </div>
             <div></div>
             <div class="preBall_container">
-                <h3>PREVIOUS BALLS</h3>
+                <div class="title">PREVIOUS BALLS</div>
                 <div class="preBall_subcontainer">
                     <div class="preBall_div">
                         <p>19</p>
@@ -78,8 +100,15 @@
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
+                
+                
+                <div 
+                    class="ticket_hoverButton" 
+                    onclick="notBingo()">
+                    Submit Ticket
+                </div>
             </div>
-            <div class="ticket">
+            <div class="ticket2">
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
@@ -115,7 +144,13 @@
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
+
+
+                <div class="isBingo" >
+                    Bingo!!
+                </div>
             </div>
+
             <div class="ticket">
                 <div><p>2</p></div>
                 <div><p>2</p></div>
@@ -152,6 +187,12 @@
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
+
+                <div 
+                    class="ticket_hoverButton" 
+                    onclick="bingo()">
+                    Submit Ticket
+                </div>
             </div>
             <div class="ticket">
                 <div><p>2</p></div>
@@ -189,6 +230,12 @@
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
+
+                <div 
+                    class="ticket_hoverButton" 
+                    onclick="bingo()">
+                    Submit Ticket
+                </div>
             </div>
         </div>
     </div>
