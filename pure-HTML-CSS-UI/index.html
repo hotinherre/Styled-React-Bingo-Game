@@ -8,22 +8,20 @@
     <script>
         function bingo(){
             swal({
-              title: 'You Win!!',
-              imageUrl: 'youWin.gif',
-              imageAlt: 'Custom image',
-              
+                imageUrl: 'youWin.gif',
+                imageWidth: 300,
+                imageHeight: 200,
             });
         }
 
         function notBingo(){
             swal({
-              title: 'Not A Bingo Ticket!!',
-              imageUrl: 'youLie.gif',
-              imageAlt: 'Custom image',
-              animation: false
+                title: 'Not A Bingo Ticket!!',
+                imageUrl: 'youLie.gif',
+                imageWidth: 300,
+                imageHeight: 200,
             });
         }
-
 
     </script>
 </head>
@@ -108,7 +106,7 @@
                     Submit Ticket
                 </div>
             </div>
-            <div class="ticket2">
+            <div class="ticket">
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
@@ -144,7 +142,6 @@
                 <div><p>2</p></div>
                 <div><p>2</p></div>
                 <div><p>2</p></div>
-
 
                 <div class="isBingo" >
                     Bingo!!

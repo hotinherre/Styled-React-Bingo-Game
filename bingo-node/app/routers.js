@@ -10,7 +10,7 @@ module.exports = app => {
     app.post('/newgame', function(req, res) {
         const numberOfBalls = req.body.numberOfBalls;
         if (!numberOfBalls || !Number.isInteger(numberOfBalls)) {
-            res.status(500).send({ error: "Field '<Integer> numberOfBalls' is missing" });
+            res.status(500).send({ error: "Field '[Integer] numberOfBalls' is missing" });
         } else {
             game.newGame(numberOfBalls);
             _debug_print("Start a new game.")
@@ -41,7 +41,7 @@ module.exports = app => {
     app.post('/verify-ticket', function(req, res) {
         const ticket = req.body.ticket;
         if (!ticket || !Array.isArray(ticket)) {
-            res.status(500).send({ error: "Field '<Array> ticket' is missing" });
+            res.status(500).send({ error: "Field '[Array] ticket' is missing" });
         } else {
             isBingo = game.verifyTicket(ticket);
             _debug_print( 

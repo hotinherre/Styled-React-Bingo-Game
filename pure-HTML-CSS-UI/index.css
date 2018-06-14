@@ -133,25 +133,7 @@
     font-size: 20px;
 }
 
-.ticket2{
-    display:grid;
-    grid-template-columns:repeat(5, 1fr);
-    cursor: pointer;
-    position: relative;
-}
-
-.ticket2 div{
-    border:1px #999999 solid;
-    background: #1a58d2;
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-
-.ticket2 .isBingo{
+.ticket .isBingo{
     font-size: 100px;
     font-weight: bold;
     background: transparent;

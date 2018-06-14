@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import {Game} from './settings';
+import BingoGame from './BingoGame/BingoGame'
+
+ReactDOM.render(
+    <BingoGame 
+        ballNum={Game.ballNum}
+        ticketNum={Game.ticketNum}
+        ticketSize={Game.ticketSize}
+        drawBallPeriod={Game.drawBallPeriod}
+        />, 
+    document.getElementById('root')
+    );
+
