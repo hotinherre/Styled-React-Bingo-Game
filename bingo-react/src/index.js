@@ -15,13 +15,13 @@ import swal from 'sweetalert2';
         allowOutsideClick:false,
         preConfirm: () => {
             return {
-                ballNum: parseInt(document.getElementById('ballNum').value),
+                ballNum: parseInt(document.getElementById('ballNum').value, 10),
                 ticketSize: {
-                    x:parseInt(document.getElementById('x').value),
-                    y:parseInt(document.getElementById('y').value),
+                    x:parseInt(document.getElementById('x').value, 10),
+                    y:parseInt(document.getElementById('y').value, 10),
                 },
-                ticketNum:parseInt(document.getElementById('ticketNum').value),
-                drawBallPeriod:parseInt(document.getElementById('drawBallPeriod').value),
+                ticketNum:parseInt(document.getElementById('ticketNum').value, 10),
+                drawBallPeriod:parseInt(document.getElementById('drawBallPeriod').value, 10),
             }
         }
     });
