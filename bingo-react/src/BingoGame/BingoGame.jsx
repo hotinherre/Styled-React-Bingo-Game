@@ -2,7 +2,13 @@ import React from 'react';
 import swal from 'sweetalert2';
 import http from '../http';
 import {URL} from '../settings'
+
+//components
 import _Ticket from './_Ticket'
+import Header from '../Header/Header.jsx'
+import Ticket from '../Ticket/Ticket.jsx'
+
+//static files
 import youWin from '../static/youWin.gif';
 import youLie from '../static/youLie.gif';
 import './BingoGame.css'
@@ -13,7 +19,7 @@ class BingoGame extends React.Component {
         this.state = {
             tickets : new Array(this.props.ticketNum)
                       .fill(undefined)
-                      .map( _ => new _Ticket(this.props.ticketSize.x * this.props.ticketSize.y, this.props.ballNum)),
+                      .map( _ => new _Ticket(this.props.ticketSize.x, this.props.ticketSize.y, this.props.ballNum)),
             pickedBall : []
         }
     }
@@ -88,7 +94,25 @@ class BingoGame extends React.Component {
     }
 
     render(){
-        return <p class="pp"> Hello World! </p>
+        const tickets = this.state.tickets.map( 
+            (ticket, idx) => 
+            <Ticket
+                key={idx}
+                ticket={ticket}
+                pickedBall={this.state.pickedBall}
+                verifyTicket={() => this.verifyTicket(idx)}/>
+        );
+        return (
+            <div className="game_container">
+                <Header 
+                    balls={this.state.pickedBall.length <= 6 ?
+                           this.state.pickedBall :
+                           this.state.pickedBall.slice(-6)} />
+                <div className="ticket_container">
+                    {tickets}
+                </div>
+            </div>
+        );
     }
 }
 

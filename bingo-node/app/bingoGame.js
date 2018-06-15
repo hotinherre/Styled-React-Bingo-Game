@@ -1,5 +1,3 @@
-'use strict';
-
 const game = {
     pendingBalls: [],
     usedBalls: new Set(),

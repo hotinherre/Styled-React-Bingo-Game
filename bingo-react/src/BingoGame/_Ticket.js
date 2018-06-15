@@ -1,4 +1,4 @@
-function _Ticket(n, total){
+function _Ticket(x, y, total){
     function _nums(n, total){
         //init nums = [1,2,3, ... m]
         const nums = new Array(total).fill(0).map((v, i) => i + 1);
@@ -9,8 +9,9 @@ function _Ticket(n, total){
         }
         return nums.slice(0, n);
     }
-
-    this.nums = _nums(n, total);
+    this.sizeX = x;
+    this.sizeY = y;
+    this.nums = _nums(x * y, total);
     this.isBingo = false;
 }
 

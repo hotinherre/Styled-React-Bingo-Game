@@ -1,0 +1,30 @@
+.header{
+    background: #d9d9d9;
+    padding: 10px 10px 20px 10px;
+    display:grid;
+    grid-template-columns:2fr 1fr 2fr;
+    grid-gap:1em;
+}
+
+.lastBall_container{
+    display:grid;
+    grid-template-columns:1fr 1fr;    
+    padding:10px;
+    text-align: center;
+}
+
+.preBall_container{
+    display:grid;
+}
+
+.preBall_container .title{
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
+.preBall_subcontainer{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+}

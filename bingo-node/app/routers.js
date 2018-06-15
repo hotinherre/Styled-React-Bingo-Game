@@ -13,7 +13,7 @@ module.exports = app => {
             res.status(500).send({ error: "Field '[Integer] numberOfBalls' is missing" });
         } else {
             game.newGame(numberOfBalls);
-            _debug_print("Start a new game.")
+            //_debug_print("Start a new game.")
             res.sendStatus(200);
         }
     });
@@ -28,7 +28,7 @@ module.exports = app => {
     */
     app.get('/nextball', function(req, res) {
         const ball = game.drawBall();
-        _debug_print(`Draw a new ball: ${ball}`);
+        //_debug_print(`Draw a new ball: ${ball}`);
         res.status(200).send({ ball: ball });
     });
 
@@ -44,11 +44,11 @@ module.exports = app => {
             res.status(500).send({ error: "Field '[Array] ticket' is missing" });
         } else {
             isBingo = game.verifyTicket(ticket);
-            _debug_print( 
-                "Verify ticket\n" + 
-                JSON.stringify(ticket) + 
-                (isBingo ? " is bingo ticket." : " is not bingo ticket.")
-            );
+            // _debug_print( 
+            //     "Verify ticket\n" + 
+            //     JSON.stringify(ticket) + 
+            //     (isBingo ? " is bingo ticket." : " is not bingo ticket.")
+            // );
             res.status(200).send({isBingo: isBingo});
         }
     });

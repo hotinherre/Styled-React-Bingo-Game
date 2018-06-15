@@ -1,7 +1,12 @@
-p{
-    font-size: 100px;
+.game_container{
+    width: 70%;
+    margin: auto;
+    background: #dee6ed;
 }
 
-.pp{
-    color:red;
+.ticket_container{
+    padding:3%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:2em;
 }
